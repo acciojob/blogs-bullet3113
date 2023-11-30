@@ -15,8 +15,16 @@ public class User {
     String firstName;
     String lastName;
 
+    public List<Blog> getBlogList() {
+        return blogList;
+    }
+
+    public void setBlogList(List<Blog> blogList) {
+        this.blogList = blogList;
+    }
+
     @OneToMany(mappedBy = "user")
-    List<Blog> blogs;
+    List<Blog> blogList;
 
     public User() {
     }
@@ -34,6 +42,14 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getPassword() {

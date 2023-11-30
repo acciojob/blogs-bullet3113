@@ -17,7 +17,7 @@ public class Blog {
     User user;
 
     @OneToMany(mappedBy = "blog")
-    List<Image> images;
+    List<Image> imageList;
 
     Date pubDate;
 
@@ -71,11 +71,11 @@ public class Blog {
         this.user = user;
     }
 
-    public List<Image> getImages() {
-        return images;
+    public List<Image> getImageList() {
+        return imageList;
     }
 
-    public void setImages(List<Image> images) {
-        this.images = images;
+    public void setImageList(List<Image> imageList) {
+        this.imageList = imageList;
     }
 }
